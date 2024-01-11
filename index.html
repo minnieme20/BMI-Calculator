@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=
+  , initial-scale=1.0"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>BMI CALCULATOR</title>
+  </head>
+  <body>
+    <div class="card">
+      <!--GENDER SECTION-->
+      <section class="gender-row">
+        <div class="gender">
+          <i class="fa-solid fa-person"></i>
+          <span>MALE</span>
+        </div>
+        <div class="gender">
+          <i class="fa-solid fa-person-dress"></i>
+          <span>FEMALE</span>
+        </div>
+      </section>
+      <!--HEIGHT SECTION-->
+      <section class="height">
+        <p class="height-p title">HEIGHT</p>
+        <p class="height-cm digits">180 <span>cm</span></p>
+        <input type="range" />
+      </section>
+      <!--WEIGHT AND AGE SECTION-->
+      <section class="weight-age">
+        <div class="weight weight-age-div">
+          <p class="weight-p title">WEIGHT</p>
+          <p class="weight-kg digits">60</p>
+          <button class="button add">+</button>
+          <button class="button subtract">-</button>
+        </div>
+        <div class="age weight-age-div">
+          <p class="age-p title">AGE</p>
+          <p class="weight-kg digits">18</p>
+          <button class="button add">+</button>
+          <button class="button subtract">-</button>
+        </div>
+      </section>
+      <!--CALCULATE BUTTON SECTION-->
+      <section class="calculate">
+        <button class="calculate-btn">CALCULATE</button>
+      </section>
+    </div>
+  </body>
+</html>
