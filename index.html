@@ -2,11 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta
-      name="viewport"
-      content="width=
-  , initial-scale=1.0"
-    />
+    <meta name="viewport" content="width=device-width , initial-scale=1.0" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
@@ -15,46 +11,59 @@
       referrerpolicy="no-referrer"
     />
     <link rel="stylesheet" href="style.css" />
-    <title>BMI CALCULATOR</title>
+    <title>BMR CALCULATOR</title>
   </head>
   <body>
     <div class="card">
       <!--GENDER SECTION-->
       <section class="gender-row">
-        <div class="gender">
+        <button class="gender" id="male-btn">
           <i class="fa-solid fa-person"></i>
           <span>MALE</span>
-        </div>
-        <div class="gender">
+        </button>
+        <button class="gender" id="female-btn">
           <i class="fa-solid fa-person-dress"></i>
           <span>FEMALE</span>
-        </div>
+        </button>
       </section>
       <!--HEIGHT SECTION-->
       <section class="height">
         <p class="height-p title">HEIGHT</p>
-        <p class="height-cm digits">180 <span>cm</span></p>
-        <input type="range" />
+        <p class="digits" id="height-cm">0 <span>cm</span></p>
+        <input type="range" min="0" max="251" value="0" id="height-range" />
       </section>
       <!--WEIGHT AND AGE SECTION-->
       <section class="weight-age">
         <div class="weight weight-age-div">
           <p class="weight-p title">WEIGHT</p>
-          <p class="weight-kg digits">60</p>
-          <button class="button add">+</button>
-          <button class="button subtract">-</button>
+          <p
+            class="weight-kg digits weight-age-input"
+            id="weight-input"
+            contenteditable="true"
+          >
+            60
+          </p>
         </div>
         <div class="age weight-age-div">
           <p class="age-p title">AGE</p>
-          <p class="weight-kg digits">18</p>
-          <button class="button add">+</button>
-          <button class="button subtract">-</button>
+          <p
+            class="age-yrs digits weight-age-input"
+            id="age-input"
+            contenteditable="true"
+          >
+            18
+          </p>
         </div>
       </section>
       <!--CALCULATE BUTTON SECTION-->
       <section class="calculate">
-        <button class="calculate-btn">CALCULATE</button>
+        <button class="calculate-btn" id="calculate-btn">CALCULATE</button>
+      </section>
+      <!--RESULTS SECTION-->
+      <section class="results">
+        <div id="BMR-results"></div>
       </section>
     </div>
+    <script src="app.js"></script>
   </body>
 </html>
