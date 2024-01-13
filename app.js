@@ -10,11 +10,13 @@ document.addEventListener("DOMContentLoaded", function () {
 
   //add event listeners to the gender buttons
   maleButton.addEventListener("click", function () {
-    console.log("male-btn clicked");
+    femaleButton.checked = false; //reset female button
+    calculateBMR();
   });
 
   femaleButton.addEventListener("click", function () {
-    console.log("female-btn clicked");
+    maleButton.checked = false; // reset the male button
+    calculateBMR();
   });
 
   // update the height display based on the range input value
@@ -34,6 +36,10 @@ document.addEventListener("DOMContentLoaded", function () {
   });
   // ... (Calculate the BMR and pass the results to the results page)
   calculateBtn.addEventListener("click", () => {
+    calculateBMR();
+  });
+
+  function calculateBMR() {
     //Get the user's input
     const height = heightRangeEl.value / 100; //convert the height into meters
     const weight = weightInputEl.textContent;
@@ -49,7 +55,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
     console.log("Your BMR is: " + BMR.toFixed(2) + " calories/day");
     //display the BMR in the BMR-results div
-    // bmrResultsEl.textContent =
-    //   "Your BMR is: " + BMR.toFixed(2) + " calories/day";
-  });
+    bmrResultsEl.textContent =
+      "Your BMR is: " + BMR.toFixed(2) + " calories/day";
+  }
 });
