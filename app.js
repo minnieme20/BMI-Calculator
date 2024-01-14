@@ -8,17 +8,6 @@ document.addEventListener("DOMContentLoaded", function () {
   const calculateBtn = document.getElementById("calculate-btn");
   const bmrResultsEl = document.getElementById("BMR-results");
 
-  //add event listeners to the gender buttons
-  maleButton.addEventListener("click", function () {
-    femaleButton.checked = false; //reset female button
-    calculateBMR();
-  });
-
-  femaleButton.addEventListener("click", function () {
-    maleButton.checked = false; // reset the male button
-    calculateBMR();
-  });
-
   // update the height display based on the range input value
   heightRangeEl.addEventListener("input", (event) => {
     heightDisplay.textContent = event.target.value + " cm";
@@ -40,6 +29,14 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   function calculateBMR() {
+    //add event listeners to the gender buttons
+    maleButton.addEventListener("click", function () {
+      femaleButton.checked = false; //reset female button
+    });
+
+    femaleButton.addEventListener("click", function () {
+      maleButton.checked = false; // reset the male button
+    });
     //Get the user's input
     const height = heightRangeEl.value / 100; //convert the height into meters
     const weight = weightInputEl.textContent;
