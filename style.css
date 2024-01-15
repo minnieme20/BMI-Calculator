@@ -56,6 +56,10 @@ section{
     margin-bottom: 15px; 
   }
 
+  .gender.selected {
+    background-color: #ccc;
+  }
+
   /*HEIGHT SECTION STYLES */
 .height{
     background-color: var(--section-bg);
