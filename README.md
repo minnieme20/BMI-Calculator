@@ -75,3 +75,5 @@ The JavaScript file contains the following logic:
 Contributions are welcome! Please submit a pull request if you have any improvements or features to add.
 
 ## Video Demo
+
+https://github.com/minnieme20/BMI-Calculator/assets/111052951/8e127ade-38dc-495c-898b-cea8aa34706e
