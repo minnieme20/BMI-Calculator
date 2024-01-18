@@ -49,19 +49,19 @@ document.addEventListener("DOMContentLoaded", function () {
 
   function calculateBMR() {
     // Get the user's input
-    const height = heightRangeEl.value / 100; // convert the height into meters
-    const weight = parseInt(weightInputEl.textContent.trim(), 10);
-    const age = parseInt(ageInputEl.textContent.trim(), 10);
+    const height = heightRangeEl.value;
+    const weight = parseInt(weightInputEl.innerText.trim(), 10);
+    const age = parseInt(ageInputEl.innerText.trim(), 10);
 
     // Check if a gender is selected
     if (selectedGender) {
-      const bmrFormulas = {
-        male:
-          66.473 + 13.7516 * weight * height + 5.0033 * height - 6.755 * age,
-        female: 655.0955 + 9.5634 * weight + 1.8496 * height - 4.6756 * age,
-      };
+      let BMR;
 
-      const BMR = bmrFormulas[selectedGender];
+      if (selectedGender === "male") {
+        BMR = 10 * weight + 6.25 * height - 5 * age + 5;
+      } else if (selectedGender === "female") {
+        BMR = 10 * weight + 6.25 * height - 5 * age - 161;
+      }
 
       // Display the BMR in the BMR-results div
       bmrResultsEl.textContent =
